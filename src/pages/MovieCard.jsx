@@ -1,6 +1,6 @@
 function MovieCard() {
     return <>
-        <h1>All Movies Details</h1>
+        <h1>Movie Details</h1>
         <p></p>
     </>
 }

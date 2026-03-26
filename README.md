@@ -1,3 +1,41 @@
+Cookbook
+Avvio scaffold Javascript + React da Vite npm create vite@latest .
+
+Installazione dipendenze npm i
+
+Avvio del progetto in sviluppo npm run dev
+
+Rimozione asset inutilizzati sotto public e src/assets. Ho tenuto solo favicon.svg.
+
+Pulizia style.css. Ho eliminato tutto e sostituito con il solito reset.
+
+Svuotato app.jsx. Rimosso import dei vari file e la creazione di state. Mantenuto solo un <h1>
+
+di test.
+
+Installazione react-router npm i react-router-dom
+
+In App.jsx:
+
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Pagina from "./pages/Pagina"
+import Layout from "./layouts/Layout"
+
+return (
+	<BrowserRouter>
+		<Routes>
+			<Route element={<Layout />} >
+				<Route path="/" element={<Pagina />} ></Route>
+				<Route path="/:parametro" element={<Pagina />} ></Route>
+			</Route>
+		</Routes>
+	</BrowserRouter>)
+Creazione componente di <Header> (/components/Header.jsx) che usa <Link>
+Creazione di layout (/layouts/DefaultLayout.jsx) con <Outlet> e <Header>
+Creazione componenti di pagina (/pages/*Page.jsx)
+
+/*******************************************************************/
+
 # MILESTONE 0
 - Ragionate sulla struttura dell'applicazione che volete realizzare. Di quali e quante pagine ho bisogno? Avranno bisogno di qualche componente? Ci sono componenti riutilizzabili più volte? Di quali props hanno bisogno? Iniziate a immaginare il risultato finale prima di scrivere una sola riga di codice.
 
