@@ -14,11 +14,11 @@ header {
   background-color:#6749c1;
 }
  
-.card-img, .card-img-top {
+.card-img-top {
     height: 80%;
     margin: auto;
     max-width: 100%;
-  
+    width: initial
 }
 
 .btn-primary {
