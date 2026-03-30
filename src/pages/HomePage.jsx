@@ -21,8 +21,8 @@ function HomePage() {
     // HTML 
     return <>
         <h1>Welcome to the best movie app</h1>
-        <p>All movies </p>
-        <div className="d-flex flex-wrap gap-3 ">
+        <p>Select a movie for details:</p>
+        <div className="card-container d-flex">
             {
                 movies.map(movieElement => <MovieCard key={movieElement.id} movieParam={movieElement} />)
             }

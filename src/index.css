@@ -1,20 +1,59 @@
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   background-color: #222;
   color: white;
 }
 
-header{
-  background-color: cadetblue;
+header {
+  background-color:#6749c1;
+}
+ 
+.card-img, .card-img-top {
+    height: 80%;
+    margin: auto;
+    max-width: 100%;
+  
 }
 
-.movie-card{
-width: calc(100% / 3 - 1rem);
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6749c1;
+    --bs-btn-border-color: #6749c1;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6749c1;
+    --bs-btn-hover-border-color: #6749c1;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6749c1;
+    --bs-btn-active-border-color: #6749c1;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6749c1;
+    --bs-btn-disabled-border-color: #6749c1;
 }
 
+.navbar-brand, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .navbar-brand:focus, .navbar-brand:hover {
+    color: white;
+}
+
+.movie-card {
+  height: 35rem;
+    width: calc(100%/ 3 - 4rem);
+    margin: 2rem
+}
+
+.card-container {
+  flex-wrap: wrap;
+justify-content:flex-start;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
