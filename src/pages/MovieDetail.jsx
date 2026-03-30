@@ -1,49 +1,21 @@
+import { useEffect, useState } from "react"
+import axios from "axios"
 import ReviewCard from "../components/ReviewCard"
+import { useParams } from "react-router-dom"
 
 function MovieDetail() {
+    const { id } = useParams()
+    const [movie, setMovie] = useState({})
 
-    const movie = {
 
-        "id": 1,
-        "title": "Inception",
-        "director": "Christopher Nolan",
-        "genre": "Science Fiction",
-        "release_year": 2010,
-        "abstract": "A skilled thief is given a chance at redemption if he can successfully perform inception.",
-        "image": "inception.jpg",
-        "created_at": "2024-11-29T10:40:13.000Z",
-        "updated_at": "2025-05-22T10:55:27.000Z",
-        "reviews": [
-            {
-                "id": 1,
-                "movie_id": 1,
-                "name": "Alice",
-                "vote": 5,
-                "text": "A mind-bending masterpiece.",
-                "created_at": "2024-11-29T10:40:13.000Z",
-                "updated_at": "2024-11-29T10:40:13.000Z"
-            },
-            {
-                "id": 2,
-                "movie_id": 1,
-                "name": "Bob",
-                "vote": 4,
-                "text": "Great visuals and a compelling story.",
-                "created_at": "2024-11-29T10:40:13.000Z",
-                "updated_at": "2024-11-29T10:40:13.000Z"
-            },
-            {
-                "id": 3,
-                "movie_id": 1,
-                "name": "Charlie",
-                "vote": 3,
-                "text": "Confusing at times, but worth watching.",
-                "created_at": "2024-11-29T10:40:13.000Z",
-                "updated_at": "2024-11-29T10:40:13.000Z"
-            }
-        ]
-
-    }
+    useEffect(() => {
+        axios.get(`http://localhost:3000/api/movies/${id}`)
+            .then(res => {
+                console.log(res.data)
+                , setMovie(res.data)
+            })
+            .catch(err => console.error(err.message))
+    }, [id])
 
     return <>
         <div className="background-img">
@@ -57,7 +29,7 @@ function MovieDetail() {
         <div>
             <h3>Reviews</h3>
             {
-               movie.reviews.map(reviewElement => <ReviewCard key={reviewElement.id} reviewParam={reviewElement}></ReviewCard>)
+                movie.reviews?.map(reviewElement => <ReviewCard key={reviewElement.id} reviewParam={reviewElement}></ReviewCard>)
             }
         </div>
     </>

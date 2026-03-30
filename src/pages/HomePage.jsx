@@ -11,8 +11,10 @@ function HomePage() {
 
     useEffect(() => {
         axios.get("http://localhost:3000/api/movies")
-            .then(res => { console.log(res.data) 
-                , setMovies(res.data)})
+            .then(res => {
+                console.log(res.data)
+                    , setMovies(res.data)
+            })
             .catch(err => console.error(err.message))
     }, [])
 
