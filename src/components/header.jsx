@@ -18,8 +18,6 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link to="/" className="nav-link active" aria-current="page" href="#">Home Page</Link>
-                            <Link to="/movies/:id" className="nav-link" href="#">Movies Details</Link>
-                            <Link to="/reviews/:id" className="nav-link" href="#">Movie Reviews</Link>
                         </div>
                     </div>
                 </div>

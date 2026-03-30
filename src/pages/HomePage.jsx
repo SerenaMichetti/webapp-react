@@ -2,6 +2,8 @@ import MovieCard from "../components/MovieCard"
 
 function HomePage() {
 
+    // JS 
+
     const fakeMovies = [
         {
             "id": 1,
@@ -59,12 +61,15 @@ function HomePage() {
             "updated_at": "2025-05-22T10:55:27.000Z"
         }
     ]
+
+
+    // HTML 
     return <>
         <h1>Welcome to the best movie app</h1>
-        <p>All movies</p>
+        <p>All movies </p>
         <div className="d-flex flex-wrap gap-3 ">
             {
-            fakeMovies.map(movie => <MovieCard key={movie.id} movie={movie} />)
+                fakeMovies.map(movieElement => <MovieCard key={movieElement.id} movie={movieElement} />)
             }
         </div>
 
