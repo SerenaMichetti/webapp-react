@@ -4,7 +4,7 @@ function HomePage() {
 
     // JS 
 
-    const fakeMovies = [
+    const movies = [
         {
             "id": 1,
             "title": "Inception",
@@ -69,7 +69,7 @@ function HomePage() {
         <p>All movies </p>
         <div className="d-flex flex-wrap gap-3 ">
             {
-                fakeMovies.map(movieElement => <MovieCard key={movieElement.id} movie={movieElement} />)
+                movies.map(movieElement => <MovieCard key={movieElement.id} movieParam={movieElement} />)
             }
         </div>
 
