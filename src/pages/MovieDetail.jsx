@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import ReviewCard from "../components/ReviewCard"
 import { useParams } from "react-router-dom"
+import ReviewForm from "../components/ReviewForm"
 
 function MovieDetail() {
     const { id } = useParams()
@@ -33,6 +34,9 @@ function MovieDetail() {
             {
                 movie.reviews?.map(reviewElement => <ReviewCard key={reviewElement.id} reviewParam={reviewElement}></ReviewCard>)
             }
+        </div>
+        <div >
+        <ReviewForm movieIdParam={id}></ReviewForm>
         </div>
     </>
 }

@@ -145,3 +145,9 @@ header {
   width: 8rem;
   align-content: center;
 }
+
+/* css pagina di form reviews*/
+
+.review-form{
+  display: flex;
+}
