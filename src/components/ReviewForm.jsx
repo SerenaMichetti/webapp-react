@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function ReviewForm({ movieIdParam }) {
+function ReviewForm({ movieIdParam, getDataParam}) {
+
+    const values = { name: "Name", text: "Text", vote: 1 }
+
+    const [formData, setFormData] = useState(values)
 
     //creo una funzione per gestire il submit del form, al momento solo un console log, poi dovrà inviare i dati al backend
     function handleSubmit(event) {
@@ -12,6 +16,7 @@ function ReviewForm({ movieIdParam }) {
             .then(res => {
                 if (res.data.id) {
                     alert("Review added successfully: " + res.data.message);
+                        getDataParam();
                     setFormData(values);
                 } else {
                     alert("Error adding review " + res.data.error);
@@ -22,9 +27,6 @@ function ReviewForm({ movieIdParam }) {
 
 
 
-    const values = { name: "Name", text: "Text", vote: 1 }
-
-    const [formData, setFormData] = useState(values)
 
 
     function setValue(event) {

@@ -8,14 +8,18 @@ function MovieDetail() {
     const { id } = useParams()
     const [movie, setMovie] = useState({})
 
-
-    useEffect(() => {
+    function getMovie() {
         axios.get(`http://localhost:3000/api/movies/${id}`)
             .then(res => {
                 console.log(res.data)
                     , setMovie(res.data)
             })
             .catch(err => console.error(err.message))
+    }
+
+
+    useEffect(() => {
+        getMovie()
     }, [id])
 
     return <>
@@ -29,14 +33,14 @@ function MovieDetail() {
                 <p>{movie.abstract}</p>
             </div>
         </div>
-            <h3 className="title-review">Reviews</h3>
+        <h3 className="title-review">Reviews</h3>
         <div className="box-reviews">
             {
                 movie.reviews?.map(reviewElement => <ReviewCard key={reviewElement.id} reviewParam={reviewElement}></ReviewCard>)
             }
         </div>
         <div >
-        <ReviewForm movieIdParam={id}></ReviewForm>
+            <ReviewForm movieIdParam={id} getDataParam={getMovie}></ReviewForm>
         </div>
     </>
 }
