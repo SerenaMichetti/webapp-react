@@ -1,10 +1,12 @@
+import ReviewStar from "./ReviewStar";
+
 function ReviewCard({reviewParam}) {
 
     return <>
-            <div key={reviewParam.id} >
+            <div className="review-card" key={reviewParam.id} >
                 <h4>{reviewParam.name}</h4>
                 <p>{reviewParam.text}</p>
-                <p>Vote: {reviewParam.vote}/5</p>
+               <ReviewStar voteParam= {reviewParam.vote}></ReviewStar>
             </div>
     </>
 }

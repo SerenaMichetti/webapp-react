@@ -11,49 +11,137 @@ body {
 }
 
 header {
-  background-color:#6749c1;
+  background-color: #6749c1;
 }
- 
+
+/* css card e home page*/
 .card-img-top {
-    height: 80%;
-    margin: auto;
-    max-width: 100%;
-    width: initial
+  height: 80%;
+  margin: auto;
+  max-width: 100%;
+  width: initial
 }
 
 .btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: #6749c1;
-    --bs-btn-border-color: #6749c1;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #6749c1;
-    --bs-btn-hover-border-color: #6749c1;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #6749c1;
-    --bs-btn-active-border-color: #6749c1;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #6749c1;
-    --bs-btn-disabled-border-color: #6749c1;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #6749c1;
+  --bs-btn-border-color: #6749c1;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6749c1;
+  --bs-btn-hover-border-color: #6749c1;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6749c1;
+  --bs-btn-active-border-color: #6749c1;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #6749c1;
+  --bs-btn-disabled-border-color: #6749c1;
 }
 
-.navbar-brand, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .navbar-brand:focus, .navbar-brand:hover {
-    color: white;
+.navbar-brand,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: white;
 }
 
 .movie-card {
   height: 35rem;
-    width: calc(100%/ 3 - 4rem);
-    margin: 2rem
+  width: calc(100%/ 3 - 4rem);
+  margin: 2rem
 }
 
 .card-container {
   flex-wrap: wrap;
-justify-content:flex-start;
+  justify-content: flex-start;
 }
 
-.card-body{
+.card-body {
   display: flex;
   flex-direction: column;
+}
+
+.card{
+  background-color:#3c3a46 ;
+  padding-top: 1rem
+}
+
+.card-title {
+  color: #fff;
+}
+
+/* css pagina di dettaglio e reviews*/
+
+.infos {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #6749c1;
+  padding: 5rem;
+  border-radius: 10rem;
+}
+
+.infos p {
+  text-align: center;
+}
+
+.image-container {
+  width: 30rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.box-container {
+  height: 40rem;
+}
+
+.box-reviews {
+  border: 1px solid #6749c1;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 2rem
+}
+
+.review-card {
+  border: 1px solid #6749c1;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+
+}
+
+.review-card h4 {
+  width: 5rem;
+}
+
+.review-card p{
+  width: calc(100% - 10rem);
+  text-align: center;
+}
+
+.review-card h4,
+.review-card p {
+  margin: 1rem;
+ 
+}
+
+.title-review {
+  margin: 3rem;
+  text-decoration: underline;
+  font-size: -webkit-xxx-large;
+
+}
+
+.vote{
+  width: 8rem;
+  align-content: center;
 }
